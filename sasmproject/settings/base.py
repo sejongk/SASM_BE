@@ -174,13 +174,6 @@ ACCOUNT_AUTHENTICATION_METHOD = 'email'
 
 REST_USE_JWT = True
 
-SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=10),
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=28),
-    'ROTATE_REFRESH_TOKENS': False,  # true면 토큰 갱신 시 refresh도 같이 갱신
-    'BLACKLIST_AFTER_ROTATION': True,
-}
-
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -195,7 +188,7 @@ EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = env('EMAIL_HOST_USER')
 
 # corheaders
-#CORS_ORIGIN_WHITELIST = ('http://127.0.0.1:3000', 'http://localhost:3000', 'http://127.0.0.1:8000',
+# CORS_ORIGIN_WHITELIST = ('http://127.0.0.1:3000', 'http://localhost:3000', 'http://127.0.0.1:8000',
 #                        'https://api.sasmbe.com', 'https://main.d2hps9gsgzjxq.amplifyapp.com',
 #                        'https://www.sasm.co.kr')
 CORS_ALLOW_CREDENTIALS = True
