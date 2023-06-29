@@ -175,6 +175,8 @@ class ForestService:
         forest.content = content
         forest.category = get_object_or_404(Category, id=category)
         if rep_pic:
+            forest.rep_pic.delete(save=False)  # 이전 rep_pic 파일 삭제
+
             ext = rep_pic.name.split(".")[-1]
             file_path = '{}.{}'.format(
                 str(time.time())+str(uuid.uuid4().hex), ext)
